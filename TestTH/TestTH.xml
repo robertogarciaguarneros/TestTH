@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestTH</name>
+    </assembly>
+    <members>
+        <member name="M:TestTH.ActivityController.#ctor(TestTH.ActivityData.IActivityData)">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
+            <response code="200">OK. Devuelve el objeto solicitado.</response>        
+            <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>
+        </member>
+        <member name="M:TestTH.ActivityController.GetActivities">
+            <summary>
+            Obtiene un lista de actividades.
+            </summary>
+            <remarks>
+            Obtiene un lista de actividades.
+            </remarks>
+            <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
+            <response code="200">OK. Devuelve el objeto solicitado.</response>        
+            <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>        
+        </member>
+        <member name="M:TestTH.ActivityController.GetFilterActivities(TestTH.Models.ActivityParameters)">
+             <summary>
+             Obtiene un lista de actividades segun filtros.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /AddActivity
+                 {
+                    "fec_ini": 2021-08-13T09:30:00,
+                    "fec_fin": "2021-08-13T09:30:00",
+                    "status": "ACTIVE",
+                 }
+            
+             </remarks>
+             <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
+             <response code="200">OK. Devuelve el objeto solicitado.</response>        
+             <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>      
+        </member>
+        <member name="M:TestTH.ActivityController.GetActivity(System.Int32)">
+            <summary>
+            Obtiene una actividad por su ID.
+            </summary>
+            <remarks>
+            Obtiene una actividad por su ID.
+            </remarks>
+            <param name="id">Id (GUID) del objeto.</param>
+            <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
+            <response code="200">OK. Devuelve el objeto solicitado.</response>        
+            <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>   
+        </member>
+        <member name="M:TestTH.ActivityController.AddActivity(TestTH.Activity)">
+             <summary>
+             Agrega una actividad.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /AddActivity
+                 {
+                    "propertyid": 1,
+                    "schedule": "2021-08-13T09:30:00",
+                    "title": "title1",
+                 }
+            
+             </remarks>
+             <param name="activity">Datos de la actividad</param>
+             <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
+             <response code="201">OK. Devuelve el objeto solicitado.</response>        
+             <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>   
+        </member>
+        <member name="M:TestTH.ActivityController.EditActivity(System.Int32,TestTH.Activity)">
+             <summary>
+             Modifica la fecha de una actividad.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /RescheduleActivity
+                 {
+                    "schedule": "2021-08-13T09:30:00"
+                 }
+            
+             </remarks>
+             <param name="id">ID de la actividad</param>
+             <param name="activity">Datos de la actividad</param>
+             <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
+             <response code="200">OK. Devuelve el objeto solicitado.</response>        
+             <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response> 
+        </member>
+        <member name="M:TestTH.ActivityController.CancelActivity(System.Int32)">
+            <summary>
+            Cancela una actividad.
+            </summary>
+            <remarks>        
+            </remarks>
+            <param name="id">ID de la actividad</param>
+            <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
+            <response code="200">OK. Devuelve el objeto solicitado.</response>        
+            <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response> 
+        </member>
+    </members>
+</doc>
