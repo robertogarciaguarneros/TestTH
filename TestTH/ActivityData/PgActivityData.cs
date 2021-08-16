@@ -62,6 +62,11 @@ namespace TestTH.ActivityData
             return property;
         }
 
+        public List<Property> GetProperties()
+        {
+            return _activityContext.Property.ToList();
+        }
+
         public List<ActivityResult> GetActivities()
         {
             //return _activityContext.Activity.Include(r => r.Property).Include(s => s.Survey).ToList();

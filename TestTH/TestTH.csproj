@@ -44,6 +44,7 @@
 
   <ItemGroup>
     <Folder Include="BDBackup\" />
+    <Folder Include="PostmanTest\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

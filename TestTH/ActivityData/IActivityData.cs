@@ -9,6 +9,8 @@ namespace TestTH.ActivityData
     {
         List<ActivityResult> GetActivities();
 
+        List<Property> GetProperties();
+
         List<ActivityResult> GetFilterActivities(ActivityParameters activityparameters);
 
         Activity GetActivity(int id);

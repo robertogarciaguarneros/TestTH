@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "6a7de0a1-586e-40d3-b72a-85f8e23b1a82",
+		"name": "THTesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "WebAPI",
+			"item": [
+				{
+					"name": "GetActivities",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdCIsImp0aSI6IjI0NDJkMGYzLTIyNjQtNDZmOC1hYWM3LTIzOWZlNDcyNzc2ZCIsImV4cCI6MTYyOTA5OTAwMCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.NayMFnHDjFDoY9ahWos-1ZkOnuJOgYf25FjWTGRrm5U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{Server}}:8080/api/v1/Activity/GetActivities",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Activity",
+								"GetActivities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProperties",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdCIsImp0aSI6Ijc0NThlNDkzLTk5ODctNDUxNi1iMTYwLTZkZDhhNTk3ZjJmZSIsImV4cCI6MTYyOTExMDkzMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.9l3OHk4AhYJKct21Ax-ca8BpiSTFgY_sboECwmjzV6M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{Server}}:8080/api/v1/Activity/GetProperties",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Activity",
+								"GetProperties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetToken",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"test\",\r\n  \"password\": \"QWEqwe123.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}:8080/login",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"test\",\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"QWEqwe123.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}:8080/register",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetFilterActivities",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdCIsImp0aSI6ImVkNzE2ZDRiLTI2MzItNGQyMy04MWQwLWNmYzhjMDUzNGQwZSIsImV4cCI6MTYyOTEwMzQwMiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.sAKRRxG7ePdCfsrik8QyESY3tJCY2LKUoYM_ycl80ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdCIsImp0aSI6ImRmY2JmM2IzLTNjZGEtNGZlNy1iNGYxLTFmY2Q2MjExNmU2NSIsImV4cCI6MTYyOTEwMDM2MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.4uqRJMDaacEeWBzmPUCa1KXa137fo9HyRe4x-UkAfS4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"fec_ini\": \"2021-08-15 09:30:00\",\r\n   \"fec_fin\": \"2021-08-18 09:30:00\",\r\n   \"status\": \"ACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}:8080/api/v1/Activity/GetFilterActivities?fec_ini=2021-08-15T09%3A30%3A00&fec_fin=2021-08-17T09%3A30%3A00&status=ACTIVE",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"Activity",
+								"GetFilterActivities"
+							],
+							"query": [
+								{
+									"key": "fec_ini",
+									"value": "2021-08-15T09%3A30%3A00"
+								},
+								{
+									"key": "fec_fin",
+									"value": "2021-08-17T09%3A30%3A00"
+								},
+								{
+									"key": "status",
+									"value": "ACTIVE"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Gateway",
+			"item": [
+				{
+					"name": "AddActivity - AG",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdCIsImp0aSI6ImVkNzE2ZDRiLTI2MzItNGQyMy04MWQwLWNmYzhjMDUzNGQwZSIsImV4cCI6MTYyOTEwMzQwMiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.sAKRRxG7ePdCfsrik8QyESY3tJCY2LKUoYM_ycl80ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"propertyid\": 3,\r\n   \"schedule\": \"2021-08-16T09:30:00\",\r\n   \"title\": \"Actividad 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}:8081/api/AddActivity",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"AddActivity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RescheduleActivity - AG",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdCIsImp0aSI6ImVkNzE2ZDRiLTI2MzItNGQyMy04MWQwLWNmYzhjMDUzNGQwZSIsImV4cCI6MTYyOTEwMzQwMiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.sAKRRxG7ePdCfsrik8QyESY3tJCY2LKUoYM_ycl80ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"schedule\": \"2021-08-16T09:30:00\",\r\n   \"title\": \"Actividad X\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}:8081/api/RescheduleActivity/15",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"RescheduleActivity",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelActivity - AG",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdCIsImp0aSI6ImVkNzE2ZDRiLTI2MzItNGQyMy04MWQwLWNmYzhjMDUzNGQwZSIsImV4cCI6MTYyOTEwMzQwMiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.sAKRRxG7ePdCfsrik8QyESY3tJCY2LKUoYM_ycl80ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}:8081/api/CancelActivity/15",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"CancelActivity",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetToken - AG",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"test\",\r\n  \"password\": \"QWEqwe123.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}:8081/api/Login",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetActivities - AG",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdCIsImp0aSI6ImVhYzQ4YWZmLTE1NGItNDlmNS1hODA4LThkNGY5MzYyOTMyZCIsImV4cCI6MTYyOTEwMTUzMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.lxiPo12pYWlA_kRvaaXdMUYFYIrW6Zi3De_AyeapcbE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdCIsImp0aSI6ImRmY2JmM2IzLTNjZGEtNGZlNy1iNGYxLTFmY2Q2MjExNmU2NSIsImV4cCI6MTYyOTEwMDM2MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.4uqRJMDaacEeWBzmPUCa1KXa137fo9HyRe4x-UkAfS4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{Server}}:8081/api/Activities",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"Activities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetFilterActivities - AG",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdCIsImp0aSI6ImVkNzE2ZDRiLTI2MzItNGQyMy04MWQwLWNmYzhjMDUzNGQwZSIsImV4cCI6MTYyOTEwMzQwMiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.sAKRRxG7ePdCfsrik8QyESY3tJCY2LKUoYM_ycl80ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdCIsImp0aSI6ImRmY2JmM2IzLTNjZGEtNGZlNy1iNGYxLTFmY2Q2MjExNmU2NSIsImV4cCI6MTYyOTEwMDM2MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.4uqRJMDaacEeWBzmPUCa1KXa137fo9HyRe4x-UkAfS4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Server}}:8081/api/FilterActivities?fec_ini=2021-08-15T09%3A30%3A00&fec_fin=2021-08-17T09%3A30%3A00&status=",
+							"protocol": "http",
+							"host": [
+								"{{Server}}"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"FilterActivities"
+							],
+							"query": [
+								{
+									"key": "fec_ini",
+									"value": "2021-08-15T09%3A30%3A00"
+								},
+								{
+									"key": "fec_fin",
+									"value": "2021-08-17T09%3A30%3A00"
+								},
+								{
+									"key": "status",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Server",
+			"value": "ec2-18-191-56-142.us-east-2.compute.amazonaws.com"
+		}
+	]
+}

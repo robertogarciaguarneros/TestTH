@@ -43,6 +43,22 @@ namespace TestTH
         }
 
         /// <summary>
+        /// Obtiene un lista de propiedades.
+        /// </summary>
+        /// <remarks>
+        /// Obtiene un lista de propiedades.
+        /// </remarks>
+        /// <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
+        /// <response code="200">OK. Devuelve el objeto solicitado.</response>        
+        /// <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>        
+        [Authorize]
+        [HttpGet("GetProperties")]
+        public IActionResult GetProperties()
+        {
+            return Ok(_activityData.GetProperties());
+        }
+
+        /// <summary>
         /// Obtiene un lista de actividades segun filtros.
         /// </summary>
         /// <remarks>
