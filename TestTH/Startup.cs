@@ -102,9 +102,11 @@ namespace TestTH
             {             
                 app.UseDeveloperExceptionPage();
 
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestTH v1"));
-            }          
+                
+            }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestTH v1"));
 
             app.UseHttpsRedirection();
 

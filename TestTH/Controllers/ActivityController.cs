@@ -66,9 +66,9 @@ namespace TestTH
         ///
         ///     POST /AddActivity
         ///     {
-        ///        "fec_ini": 2021-08-13T09:30:00,
+        ///        "fec_ini": "2021-08-13T09:30:00",
         ///        "fec_fin": "2021-08-13T09:30:00",
-        ///        "status": "ACTIVE",
+        ///        "status": "ACTIVE"
         ///     }
         ///
         /// </remarks>
@@ -114,7 +114,7 @@ namespace TestTH
         ///     {
         ///        "propertyid": 1,
         ///        "schedule": "2021-08-13T09:30:00",
-        ///        "title": "title1",
+        ///        "title": "title1"
         ///     }
         ///
         /// </remarks>
